@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function RewardsHistory() {
   const sortRef = useRef(null);
 
-  const [stateOfCheckMark, setStateOfCheckMark] = useState(false);
+  const [stateOfCheckMark, setStateOfCheckMark] = useState(true);
   const [popupState, setPopupState] = useState(false);
 
   const [popupNameState, setPopupNameState] = useState('USD');
