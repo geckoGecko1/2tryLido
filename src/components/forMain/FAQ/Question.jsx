@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import '../../../App.css';
 
 function Question(props) {
+  const [stateOfQuestion, setStateOfQuestion] = useState(false);
+
+  const openOrClose = () => {
+    setStateOfQuestion(!stateOfQuestion);
+  };
+
   return (
     <div>
       <div class="AccordionStyles__AccordionStyle-sc-11dasyk-0 jLmTCe boxOfFAQ">
@@ -9,8 +16,9 @@ function Question(props) {
           role="button"
           id="react-collapsed-toggle-undefined"
           aria-controls="react-collapsed-panel-undefined"
-          aria-expanded="true"
+          aria-expanded={stateOfQuestion}
           tabindex="0"
+          onClick={openOrClose}
           class="AccordionStyles__AccordionSummaryStyle-sc-11dasyk-1 hQnZHr boxOfFAQ_titleBox">
           <div class="AccordionStyles__AccordionTitleStyle-sc-11dasyk-2 ARXxN boxOfFAQ_title">
             {props.title}
@@ -20,7 +28,9 @@ function Question(props) {
             height="24"
             viewBox="0 0 24 24"
             fill="currentColor"
-            class="AccordionStyles__AccordionArrowStyle-sc-11dasyk-3 caoPyP">
+            class={`AccordionStyles__AccordionArrowStyle-sc-11dasyk-3 ${
+              stateOfQuestion == false ? 'lcebZe' : 'caoPyP'
+            }`}>
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -28,14 +38,16 @@ function Question(props) {
             />
           </svg>
         </div>
-        <div
-          id="react-collapsed-panel-undefined"
-          aria-hidden="false"
-          style={{ boxSizing: 'border-box' }}>
-          <div class="AccordionStyles__AccordionContentStyle-sc-11dasyk-4 iRgpCW boxOfFAQ_textBox">
-            <div class="sc-5a67ebfb-0 iFRSXJ boxOfFAQ_text">{props.text}</div>
+        {stateOfQuestion && (
+          <div
+            id="react-collapsed-panel-undefined"
+            aria-hidden="false"
+            style={{ boxSizing: 'border-box' }}>
+            <div class="AccordionStyles__AccordionContentStyle-sc-11dasyk-4 iRgpCW boxOfFAQ_textBox">
+              <div class="sc-5a67ebfb-0 iFRSXJ boxOfFAQ_text">{props.text}</div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
