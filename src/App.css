@@ -2314,18 +2314,15 @@ data-styled.g227[id='sc-keyframes-cLMtGC'] {
 } /*!sc*/
 
 .boxOfFAQ {
-  font-family: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: rgb(39, 56, 82);
-  font-size: 14px;
-  line-height: 1.5em;
-  font-weight: 500;
-  text-size-adjust: none;
-  padding: 0px;
+  height: auto;
   margin: 0px 0px 8px;
   background: rgb(255, 255, 255);
   border-radius: 20px;
+  transition-duration: 5s;
+
 }
+
+
 
 .boxOfFAQ_titleBox {
   font-family: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
@@ -2344,6 +2341,7 @@ data-styled.g227[id='sc-keyframes-cLMtGC'] {
   outline: none;
   min-height: 40px;
   box-sizing: content-box;
+  transition-duration: 5s;
 }
 
 .boxOfFAQ_title {
@@ -2359,20 +2357,24 @@ data-styled.g227[id='sc-keyframes-cLMtGC'] {
   font-weight: 800;
   font-size: 14px;
   line-height: 1.6em;
+  transition-duration: 5s;
 }
-
-.boxOfFAQ_textBox {
-  font-family: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  text-size-adjust: none;
+.boxOfFAQ_transitionTextBox{
+  position: relative;
+  height: auto;
   margin: 0px;
-  color: rgb(122, 138, 160);
-  padding: 0px 32px 32px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.6em;
+  transition-property: height;
+  transition-duration: 5s;
   
 }
+
+
+.boxOfFAQ_textBox {
+  padding: 0px 32px 32px;
+  height: auto;
+  transition-duration: 5s;
+}
+
 .boxOfFAQ_text {
   font-family: Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -2383,4 +2385,19 @@ data-styled.g227[id='sc-keyframes-cLMtGC'] {
   line-height: 1.6em;
   margin: 0px;
   padding: 0px;
+  transition-duration: 5s;
+}
+
+
+
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

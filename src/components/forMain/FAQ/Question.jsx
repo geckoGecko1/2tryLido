@@ -3,14 +3,41 @@ import '../../../App.css';
 
 function Question(props) {
   const [stateOfQuestion, setStateOfQuestion] = useState(false);
+  const [stateOfTransition, setStateOfTransition] = useState(false);
 
+  const style2 = {
+    boxSizing: 'bordeer-box',
+    height: '102px',
+    overflow: 'hidden',
+    display: 'block',
+    willChange: 'height',
+    transition: 'height 301ms cubic-bezier(0.4, 0, 0.2, 1) 0s',
+  };
+
+  const style1 = {
+    boxSizing: 'bordeer-box',
+    height: '0px',
+    overflow: 'hidden',
+    display: 'none',
+    willChange: 'height',
+    transition: 'height 301ms cubic-bezier(0.4, 0, 0.2, 1) 0s',
+  };
+
+  const style3 = {
+    boxSizing: 'bordeer-box',
+  };
   const openOrClose = () => {
     setStateOfQuestion(!stateOfQuestion);
+    setStateOfTransition(!stateOfTransition);
+  };
+
+  const changeStateOfTransition = () => {
+    setStateOfTransition(!stateOfTransition);
   };
 
   return (
     <div>
-      <div class="AccordionStyles__AccordionStyle-sc-11dasyk-0 jLmTCe boxOfFAQ">
+      <div class="AccordionStyles__AccordionStyle-sc-11dasyk-0 jLmTCe boxOfFAQ noselect">
         <div
           type="button"
           role="button"
@@ -41,8 +68,9 @@ function Question(props) {
         {stateOfQuestion && (
           <div
             id="react-collapsed-panel-undefined"
-            aria-hidden="false"
-            style={{ boxSizing: 'border-box' }}>
+            aria-hidden={stateOfQuestion}
+            style={stateOfQuestion ? style2 && style3 : style2 && style1}
+            className={`boxOfFAQ_transitionTextBox`}>
             <div class="AccordionStyles__AccordionContentStyle-sc-11dasyk-4 iRgpCW boxOfFAQ_textBox">
               <div class="sc-5a67ebfb-0 iFRSXJ boxOfFAQ_text">{props.text}</div>
             </div>
