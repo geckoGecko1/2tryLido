@@ -14,7 +14,7 @@ function PoolData() {
                 <div class="sc-13e170f7-0 juzJhD">Total output</div>
               </div>
               <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
-                1,246,887,578.70 USDT
+                1,246,887,578.70 USDC
                 {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
               </div>
             </div>
@@ -39,7 +39,7 @@ function PoolData() {
                 <div class="sc-13e170f7-0 juzJhD">User Revenue</div>
               </div>
               <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
-                1,246,887,578.70 USDT
+                1,246,887,578.70 USDC
                 {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
               </div>
             </div>

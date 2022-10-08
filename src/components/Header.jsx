@@ -48,7 +48,8 @@ function Header() {
         <button type="button" class="ButtonStyles__ButtonStyle-sc-gzfh1w-0 kehQmq">
           <span class="ButtonStyles__ButtonContentStyle-sc-gzfh1w-2 kdqiBT">Connect wallet</span>
         </button>
-        <button
+        {/* Night mode */}
+        {/* <button
           type="button"
           class="ButtonStyles__ButtonStyle-sc-gzfh1w-0 fozxxf sc-da274e2e-0 OwrAb">
           <span class="ButtonStyles__ButtonContentStyle-sc-gzfh1w-2 kdqiBT">
@@ -60,7 +61,7 @@ function Header() {
               />
             </svg>
           </span>
-        </button>
+        </button> */}
       </div>
     </header>
   );

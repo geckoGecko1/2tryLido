@@ -5,9 +5,13 @@ import { useCallback, useEffect, useState } from 'react';
 function UserOutput() {
   const [address1, setAdress1] = useState('0x******ikFZ');
   const [address2, setAdress2] = useState('0x******i5dg');
+  const [address3, setAdress3] = useState('0x******fs12');
+  const [address4, setAdress4] = useState('0x******iaUg');
 
   const [number1, setNumber1] = useState('140');
   const [number2, setNumber2] = useState('267');
+  const [number3, setNumber3] = useState('465');
+  const [number4, setNumber4] = useState('742');
 
   function makeid(length) {
     let result = '';
@@ -19,28 +23,43 @@ function UserOutput() {
     return result;
   }
 
-  function makeidNumber(length) {
-    let result = '';
-    let characters = '0123456789';
-    let charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+  function randomIntFromInterval(min, max) {
+    // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  // function makeidNumber(length) {
+  //   let result = '';
+  //   let characters = '123456789';
+  //   let charactersLength = characters.length;
+  //   for (let i = 0; i < length; i++) {
+  //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  //   }
+  //   return result;
+  // }
+
   useEffect(() => {
-    setInterval(() => {
+    // setInterval(() => {
+    //   setAdress1('0x' + '********' + makeid(4));
+    //   setNumber1(makeidNumber(3));
+    //   setAdress2(address1);
+    //   setNumber2(number1);
+    // }, 8000);
+    const interval = setInterval(() => {
       setAdress1('0x' + '********' + makeid(4));
-      setNumber1(makeidNumber(3));
+      setNumber1(randomIntFromInterval(1, 10000));
       setAdress2(address1);
       setNumber2(number1);
-    }, 8000);
-    console.log('ADDRESS IN USEEFFECT', address1);
+      setAdress3(address2);
+      setNumber3(number2);
+      setAdress4(address3);
+      setNumber4(number3);
+    }, 800);
+    return () => clearInterval(interval);
   }, [address1]);
 
   return (
-    <section class="sc-a9101ce-0 dSBLtC">
+    <section class="sc-a9101ce-0 dSBLtC noselect">
       <div class="sc-a9101ce-1 kwaAuB">
         <h2 class="sc-a9101ce-2 dwxKiI">User Output</h2>
       </div>
@@ -49,24 +68,40 @@ function UserOutput() {
           <div class="DataTableStyles__DataTableStyle-sc-ipz6cg-0 ikJPGj">
             <div class="DataTableStyles__DataTableRowStyle-sc-ipz6cg-1 fsdlSu">
               <div class="DataTableStyles__DataTableTitleStyle-sc-ipz6cg-2 indEft">
-                <div class="sc-13e170f7-0 juzJhD">Address</div>
+                <div class="sc-13e170f7-0 juzJhD">
+                  <b>Address</b>
+                </div>
               </div>
               <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
-                Quantity
+                <b>Quantity</b>
                 {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
               </div>
             </div>
             <div class="DataTableStyles__DataTableRowStyle-sc-ipz6cg-1 fsdlSu">
               <div class="DataTableStyles__DataTableTitleStyle-sc-ipz6cg-2 indEft">{address1}</div>
               <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
-                {number1} USDT
+                {number1} USDC
                 {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
               </div>
             </div>
             <div class="DataTableStyles__DataTableRowStyle-sc-ipz6cg-1 fsdlSu">
               <div class="DataTableStyles__DataTableTitleStyle-sc-ipz6cg-2 indEft">{address2}</div>
               <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
-                {number2} USDT
+                {number2} USDC
+                {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
+              </div>
+            </div>
+            <div class="DataTableStyles__DataTableRowStyle-sc-ipz6cg-1 fsdlSu">
+              <div class="DataTableStyles__DataTableTitleStyle-sc-ipz6cg-2 indEft">{address3}</div>
+              <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
+                {number3} USDC
+                {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
+              </div>
+            </div>
+            <div class="DataTableStyles__DataTableRowStyle-sc-ipz6cg-1 fsdlSu">
+              <div class="DataTableStyles__DataTableTitleStyle-sc-ipz6cg-2 indEft">{address4}</div>
+              <div class="DataTableStyles__DataTableValueStyle-sc-ipz6cg-3 fZwGEa">
+                {number4} USDC
                 {/* <span class="InlineLoaderStyles__InlineLoaderStyle-sc-zlo4k8-0 dUxivi"> </span> */}
               </div>
             </div>
