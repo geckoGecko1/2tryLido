@@ -52,7 +52,7 @@
 } /*!sc*/
 data-styled.g9[id='BlockStyles__BlockStyle-sc-x6m4g3-0'] {
   content: 'dWULCi,hqHkje,zeCCr,jJQZXn,';
-} /*!sc*/
+} 
 .hOwAWP {
   display: -webkit-box;
   display: -webkit-flex;
@@ -513,7 +513,7 @@ data-styled.g9[id='BlockStyles__BlockStyle-sc-x6m4g3-0'] {
 } /*!sc*/
 data-styled.g11[id='withStyledSystem-sc-16nltcn-0'] {
   content: 'hOwAWP,jFRrno,ffnVwv,ikQVfU,epiThS,ijcZvh,hGhKum,oHfMt,hXUotQ,jXCBDN,tHWKn,bjRDGK,dBTLNJ,ghYAKG,jYGkVJ,MUQSm,jzCPsB,dxaNbM,cCmFjS,kEivEW,knYknU,ekLblf,dfGzxs,jDhufL,cdrfwP,jgTHgG,fVIW,bZhQlM,ekVDsz,cHmlbq,bmvpDA,jXkedI,';
-} /*!sc*/
+} 
 .cWwrnY {
   box-sizing: border-box;
   margin: 0;
@@ -990,7 +990,6 @@ data-styled.g49[id='InputStyles__InputContentStyle-sc-kdtshm-1'] {
   outline: none;
   position: relative;
   top: 0px;
-  color: #fff;
 } /*!sc*/
 .WHtZg::-webkit-input-placeholder {
   -webkit-transition: opacity 100ms ease;
@@ -1009,19 +1008,27 @@ data-styled.g49[id='InputStyles__InputContentStyle-sc-kdtshm-1'] {
   transition: opacity 100ms ease;
 } /*!sc*/
 .WHtZg:disabled {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgb(83, 83, 83);
+
 } /*!sc*/
 .WHtZg::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgb(83, 83, 83);
 } /*!sc*/
 .WHtZg::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgb(83, 83, 83);
 } /*!sc*/
 .WHtZg:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgb(83, 83, 83);
+
 } /*!sc*/
 .WHtZg::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
+  color: rgb(83, 83, 83);
+  
 } /*!sc*/
 .WHtZg:-webkit-autofill {
   box-shadow: 0 0 0 100px #2f2f37 inset !important;
@@ -2648,6 +2655,7 @@ data-styled.g146[id='sc-6d14a0be-1'] {
   color: #273852;
   padding: 0;
   border-radius: 20px;
+  background-color: #ffffff;
 } /*!sc*/
 @media screen and (max-width: 359px) {
   .gLvfmn {
@@ -2664,6 +2672,7 @@ data-styled.g146[id='sc-6d14a0be-1'] {
   color: #273852;
   padding: 32px 32px 24px 32px;
   border-radius: 20px;
+  background-color: #ffffff;
 } /*!sc*/
 @media screen and (max-width: 359px) {
   .hJvurP {
@@ -2718,6 +2727,7 @@ data-styled.g148[id='sc-6ee5b3c-0'] {
 } /*!sc*/
 .ekXqsL {
   font-size: 18px;
+  background-color: #f2f4f6;
 } /*!sc*/
 data-styled.g149[id='sc-c9951d72-0'] {
   content: 'ekXqsL,';

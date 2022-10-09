@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useState } from 'react';
 
 function UserOutput() {
-  const [address1, setAdress1] = useState('0x******ikFZ');
-  const [address2, setAdress2] = useState('0x******i5dg');
-  const [address3, setAdress3] = useState('0x******fs12');
-  const [address4, setAdress4] = useState('0x******iaUg');
+  const [address1, setAdress1] = useState('0xBs2***ikFZ');
+  const [address2, setAdress2] = useState('0xNv4***i5dg');
+  const [address3, setAdress3] = useState('0xgg0***fs12');
+  const [address4, setAdress4] = useState('0xoP3***iaUg');
 
   const [number1, setNumber1] = useState('140');
   const [number2, setNumber2] = useState('267');
@@ -15,7 +15,7 @@ function UserOutput() {
 
   function makeid(length) {
     let result = '';
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let characters = '123456789abcdefABCDEF';
     let charactersLength = characters.length;
     for (let i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -27,6 +27,15 @@ function UserOutput() {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+
+  const randomNumber = () => {
+    const random = randomIntFromInterval(1, 100);
+    if (random <= 10) {
+      return randomIntFromInterval(13, 10000);
+    } else {
+      return randomIntFromInterval(100, 1000);
+    }
+  };
 
   // function makeidNumber(length) {
   //   let result = '';
@@ -46,15 +55,15 @@ function UserOutput() {
     //   setNumber2(number1);
     // }, 8000);
     const interval = setInterval(() => {
-      setAdress1('0x' + '********' + makeid(4));
-      setNumber1(randomIntFromInterval(1, 10000));
+      setAdress1('0x' + makeid(3) + '***' + makeid(5));
+      setNumber1(randomNumber);
       setAdress2(address1);
       setNumber2(number1);
       setAdress3(address2);
       setNumber3(number2);
       setAdress4(address3);
       setNumber4(number3);
-    }, 800);
+    }, 1000);
     return () => clearInterval(interval);
   }, [address1]);
 
