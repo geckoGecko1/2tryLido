@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useState } from 'react';
 
 function UserOutput() {
-  const [address1, setAdress1] = useState('0xBs2***ikFZ');
-  const [address2, setAdress2] = useState('0xNv4***i5dg');
-  const [address3, setAdress3] = useState('0xgg0***fs12');
-  const [address4, setAdress4] = useState('0xoP3***iaUg');
+  const [address1, setAdress1] = useState('0xBs2...ikFZ');
+  const [address2, setAdress2] = useState('0xNv4...i5dg');
+  const [address3, setAdress3] = useState('0xgg0...fs12');
+  const [address4, setAdress4] = useState('0xoP3...iaUg');
 
   const [number1, setNumber1] = useState('140');
   const [number2, setNumber2] = useState('267');
@@ -49,13 +49,13 @@ function UserOutput() {
 
   useEffect(() => {
     // setInterval(() => {
-    //   setAdress1('0x' + '********' + makeid(4));
+    //   setAdress1('0x' + '...**' + makeid(4));
     //   setNumber1(makeidNumber(3));
     //   setAdress2(address1);
     //   setNumber2(number1);
     // }, 8000);
     const interval = setInterval(() => {
-      setAdress1('0x' + makeid(3) + '***' + makeid(5));
+      setAdress1('0x' + makeid(3) + '...' + makeid(5));
       setNumber1(randomNumber);
       setAdress2(address1);
       setNumber2(number1);
