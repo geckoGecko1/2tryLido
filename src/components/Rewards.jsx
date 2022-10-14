@@ -2,6 +2,7 @@
 import './forRewards/rewards.css';
 import RewardsBalance from './forRewards/RewardsBalance';
 import RewardsHistory from './forRewards/RewardsHistory';
+import Withdraw from './forRewards/Withdraw';
 
 function Rewards() {
   return (
@@ -16,6 +17,7 @@ function Rewards() {
         <h4 class="sc-6d14a0be-1 geYLLk">Track your earnings and referral rewards.</h4>
         <RewardsBalance />
         <RewardsHistory />
+        <Withdraw />
       </main>
     </div>
   );
